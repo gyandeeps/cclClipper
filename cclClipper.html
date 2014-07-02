@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CCL Clipper and JSON Search Engine</title>
+	<style>
+		body {width: 650px; background-color: #F4F4F4;}
+		div {padding:5px 10px;}
+		textarea {width: 100%;}
+		button{margin-left:10px; margin-right:30px;}
+        #note{font: normal 10px Tahoma,Geneva,Verdana,Trebuchet MS,sans-serif;}
+	</style>
+    <script language="JavaScript" src="jquery-1.11.1.min.js"></script>
+	<script language="JavaScript" src="cclClipper.js"></script>
+    <script language="JavaScript" src="jsonSearch.js"></script>
+  </head>
+  <body>
+	<div>CCL Clipper and JSON Search Engine</div>
+	<!-- textarea where the source is copied into -->
+	<div>
+		<textarea tabindex='1' id='ccl_input' rows='6'></textarea>
+	</div>
+    <div>
+        <span>Search String :</span><input type="text" id="search_string" /><br><br>
+        <input type="radio" name="group1" value="0" checked> Search for values using keys in JSON<br>
+        <input type="radio" name="group1" value="1" > Search for keys using values in JSON<br>
+        <span id="note">* Searching for objects is not available </span><br>
+        <!-- <input type="radio" name="group1" value="Water"> Water<br> -->
+    </div>
+	<div>
+		<button id='ccl_clip' tabindex='2'>CCL Clip</button>
+        <button id='json_search' tabindex='3'>JSON Search</button>
+        <input type="checkbox" id="putSlash" value="0" checked="true"/><span>Clip using '\'</span>
+	</div>
+	<div>
+		<textarea id='cclParsedString' rows='6'></textarea>
+	</div>
+  </body>
+</html>
